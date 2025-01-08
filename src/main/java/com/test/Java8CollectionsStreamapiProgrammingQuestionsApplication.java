@@ -66,13 +66,13 @@ public class Java8CollectionsStreamapiProgrammingQuestionsApplication {
 		System.out.println();
 		System.out.println();
 		// 3. Collectors.collectingAndThen
-		System.out.println("Stream.takeWhile && Stream.dropWhile:");
+		System.out.println("Collectors.collectingAndThen:");
 		System.out.println(numbers.parallelStream().mapToDouble(Integer::intValue).boxed()
 				.collect(Collectors.collectingAndThen(Collectors.averagingDouble(Double::doubleValue), Math::round)));
 		System.out.println();
 		System.out.println();
 		// 4. Stream.takeWhile //5.Stream.dropWhile
-		System.out.println("Stream::ofNullable:");
+		System.out.println("Stream.takeWhile & Stream.dropWhile:");
 		System.out.println(numbers.stream().takeWhile(num -> num < 7).dropWhile(num -> num < 4).toList());
 		System.out.println();
 		System.out.println();
